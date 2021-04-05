@@ -1781,6 +1781,7 @@ bool MomentChi2Test ( struct HashInfo *info, int inputSize)
   moments b[NCPU];
   static std::thread t[NCPU];
   printf("%d threads starting... ", NCPU);
+  fflush(NULL);
   for (int i=0; i < NCPU; i++) {
     const unsigned start = i * len;
     b[i][0] = 0.; b[i][1] = 0.; b[i][2] = 0.; b[i][3] = 0.;
